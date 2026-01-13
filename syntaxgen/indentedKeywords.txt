@@ -14,6 +14,8 @@ afterburner fuel
 afterburner heat
 afterburner thrust
 align
+alignment
+alpha
 ammo
 anchor
 and
@@ -21,6 +23,7 @@ angle
 anti-missile
 appeasing
 apply
+arc
 arrival
 assert
 assist
@@ -40,11 +43,11 @@ bay
 belt
 blast radius
 blocked
+blue
 board
 boarding
 box
 branch
-bribe
 bribe
 bunks
 burst count
@@ -74,12 +77,14 @@ commodities
 commodity
 complete
 confusion
+constant strength
 contents
 conversation
 cooling
 cooling energy
 cooling inefficiency
 core crystal
+corrosion damage
 cost
 coward
 credits
@@ -88,9 +93,12 @@ crew attack
 crew defense
 crew equivalent
 crystal projector
+damage dropoff
+daring
 date
 day
 deadline
+debt
 decline
 defer
 depleted shield delay
@@ -103,11 +111,17 @@ die
 die effect
 dimensions
 disable
+disabled recovery time
 disables
+discharge damage
 display name
 disruption damage
 distance
 drag
+drop rate
+dropoff modifier
+duration
+end
 energy capacity
 energy consumption
 energy generation
@@ -115,15 +129,17 @@ engine
 engine capacity
 enter
 entering
+environmental effect
 escort
 evade
 event
 explode
+Factions
 fail
 fighers
 fighters
+fill
 final explode
-fine
 fine
 fire effect
 firing energy
@@ -134,8 +150,10 @@ firing hull
 flame
 flare sound
 flare sprite
-fleeing uninterested
+fleeing
 fleet
+flippable
+flotsam chance
 flotsam sprite
 forbearing
 force protection
@@ -147,12 +165,15 @@ friendly hail
 from
 fuel
 fuel capacity
+fuel damage
 galaxy
 gaslining
 gimbal
 give
 goto
 government
+gravitational
+green
 groups
 gun
 gun ports
@@ -189,6 +210,8 @@ if
 illegal
 image
 inaccuracy
+inactive
+index
 infiltrating
 infrared tracking
 inject
@@ -212,22 +235,30 @@ landing
 landscape
 language
 launch
+leading
 leak
 left
 licenses
 lifetime
+line
+lingering
 link
+list
 live effect
 load
 location
 log
 map
+mark
 mass
+merciful
 message
 middle
+minable
 minables
 mining
 minor
+Minor People
 missile strength
 month
 mortgage
@@ -235,6 +266,7 @@ music
 mute
 name
 names
+nanite upgrades
 navigate
 near
 neighbor
@@ -243,6 +275,7 @@ never
 never disabled
 next
 no repeat
+non-blocking
 not
 noun
 npc
@@ -273,6 +306,7 @@ passengers
 payload
 payment
 penalty for
+People
 period
 personality
 phasing
@@ -284,13 +318,16 @@ player reputation
 plunders
 plural
 point
+pointer
 pos
 position
+positions
 power
 principal
 priority
 provoke
 quantum keystone
+quiet
 radar jamming
 radar tracking
 raid
@@ -298,29 +335,52 @@ ramscoop
 random
 random angle
 random frame rate
+random hull
 random lifetime
 random spin
+random start frame
 random velocity
+range
 range override
+reactor upgrades
+red
+relative hull damage
+relay upgrades
+frugal
 reload
 remnant node
 remove
 repeat
+default attitude
+custom penalties for
+travel restrictions
+frame time
+scan
+foreign penalties for
+send untranslated hails
+atrocities
+substitutions
 replace
 reputation with
 require
 required crew
 required reputation
+restricted
 reverse engine
 reverse flare sound
 reverse flare sprite
 reverse thrust
 reverse thrusting energy
 reverse thrusting heat
+reversed
+rewind
 right
 ring
+rotatable
+rotatable
 safe
 save
+scale
 scan cargo
 scan interference
 scan outfits
@@ -330,6 +390,7 @@ scram drive
 secretive
 security
 sequence
+series
 set
 shield damage
 shield energy
@@ -342,14 +403,20 @@ shipyard
 shooting star
 show
 size
+slowing damage
 slowing resistance
+solar cell
 solar collection
+solar heat
 sound
+sound category
 source
 spaceport
 spawn
 spinal mount
 sprite
+start
+start frame
 status
 staying
 stealth
@@ -358,25 +425,34 @@ steering flare sound
 steering flare sprite
 stopover
 stream
+strength
 string
 submunition
+succeed
 surveillance
+swarming
 swizzle
 system
+system-wide
 tactical scan efficiency
 tactical scan power
 target
+target effect
 term
 test-data
+text
 threshold
 threshold percentage
+throttle control
 thrust
 thrusting energy
 thrusting heat
 thumbnail
 timid
 to
+toughness
 tracker capacity
+tracking
 trade
 travel
 tribute
@@ -391,7 +467,10 @@ turret turn
 uncapturable
 unconstrained
 under
+uninterested
+unique
 unlink
+unmark
 unplunderable
 unvisit
 uuid
@@ -414,6 +493,3 @@ wind
 word
 year
 zoom
-Factions
-Minor People
-People
