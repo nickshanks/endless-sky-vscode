@@ -4,6 +4,7 @@ accept
 accompany
 account
 action
+actions
 active
 active cooling
 add
@@ -24,6 +25,7 @@ arrival
 assert
 assist
 assisting
+asteroid scan efficiency
 asteroid scan power
 asteroids
 atmosphere scan
@@ -53,6 +55,7 @@ capture
 capture attack
 capture defense
 cargo
+cargo scan efficiency
 cargo scan power
 cargo scan speed
 cargo space
@@ -83,6 +86,7 @@ credits
 crew
 crew attack
 crew defense
+crew equivalent
 crystal projector
 date
 day
@@ -135,6 +139,7 @@ fleet
 flotsam sprite
 forbearing
 force protection
+formation
 frame rate
 frequency
 friendly disabled hail
@@ -144,9 +149,11 @@ fuel
 fuel capacity
 galaxy
 gaslining
+gimbal
 give
 goto
 government
+groups
 gun
 gun ports
 habitable
@@ -162,6 +169,7 @@ heat generation
 heat protection
 help
 heroic
+history
 hit effect
 hit force
 homing
@@ -174,6 +182,7 @@ hull energy
 hull heat
 hull repair
 hull repair rate
+hunting
 hyperdrive
 icon
 if
@@ -184,6 +193,7 @@ infiltrating
 infrared tracking
 inject
 input
+inscrutable
 installable
 interest
 invisible
@@ -194,6 +204,7 @@ jump
 jump drive
 jump fuel
 jump speed
+ka'sei
 key
 kill
 label
@@ -243,6 +254,7 @@ opportunistic
 optical tracking
 or
 outfit
+outfit scan efficiency
 outfit scan power
 outfit scan speed
 outfit space
@@ -251,8 +263,11 @@ outfitter
 outfitters
 outline
 over
+overheat damage rate
+overheat damage threshold
 pad
 parallel
+parked
 partial
 passengers
 payload
@@ -270,6 +285,7 @@ plunders
 plural
 point
 pos
+position
 power
 principal
 priority
@@ -311,6 +327,7 @@ scan outfits
 scene
 score
 scram drive
+secretive
 security
 sequence
 set
@@ -346,7 +363,9 @@ submunition
 surveillance
 swizzle
 system
+tactical scan efficiency
 tactical scan power
+target
 term
 test-data
 threshold
@@ -375,6 +394,7 @@ under
 unlink
 unplunderable
 unvisit
+uuid
 value
 variant
 velocity
@@ -394,3 +414,6 @@ wind
 word
 year
 zoom
+Factions
+Minor People
+People

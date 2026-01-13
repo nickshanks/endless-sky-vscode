@@ -1,0 +1,50 @@
+account
+category
+clearance
+collapsed
+color
+conversation
+date
+effect
+event
+flagship index
+fleet
+galaxy
+government
+harvested
+hazard
+history
+interface
+landing message
+logbook
+map coloring
+map zoom
+minable
+mission
+news
+outfit
+outfitter
+person
+phrase
+pilot
+planet
+playtime
+plugins
+previous system
+rating
+reputation with
+ship
+shipyard
+star
+start
+storage
+system
+system entry method
+test
+test-data
+tip
+trade
+travel
+tribute received
+visited
+visited planet
