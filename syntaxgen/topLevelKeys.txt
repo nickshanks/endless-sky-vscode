@@ -52,11 +52,12 @@ star
 start
 stock depreciation
 storage
+substitutions
 swizzle
 system
 system entry method
-test
 test-data
+test
 tip
 trade
 travel
@@ -64,3 +65,4 @@ travel destination
 tribute received
 visited
 visited planet
+wormhole

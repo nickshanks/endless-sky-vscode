@@ -1,14 +1,28 @@
 abort
 accept
+assist
+atrocity
+autosave
+board
+capture
 complete
 deactivation
 decline
+defer
 despawn
+destroy
 die
+disable
+encounter
 enter
 fail
 kill
 launch
+never
 offer
+provoke
+scan
+scan cargo
+scan outfits
 timeup
 visit

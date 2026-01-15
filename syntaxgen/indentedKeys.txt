@@ -1,5 +1,4 @@
 acceleration
-accept
 accompany
 account
 action
@@ -8,16 +7,19 @@ activation requirements
 active
 active cooling
 add
+addend
 afterburner effect
 afterburner energy
 afterburner fuel
 afterburner heat
+afterburner shields
 afterburner thrust
 align
 alignment
 alpha
 ammo
 anchor
+anchor point
 angle
 anti-missile
 appeasing
@@ -27,6 +29,11 @@ arrival
 assert
 assist
 assisting
+asteroid mount
+asteroid mount 4
+asteroid mount am
+asteroid mount jd
+asteroid mount small
 asteroid scan efficiency
 asteroid scan power
 asteroids
@@ -36,7 +43,6 @@ atrocity
 attitude toward
 attributes
 automaton
-autosave
 back
 bar
 bay
@@ -51,6 +57,7 @@ branch
 bribe
 bribe threshold
 bunks
+burn damage
 burn protection
 burst count
 burst reload
@@ -66,14 +73,17 @@ cargo scan speed
 cargo space
 category
 center
-choice
-clear
 clearance
 cloak
+cloaked communication
+cloaked scanning
+cloaked shield permeability
 cloaking energy
 cloaking fuel
+cluster
 color
 colored
+combat rating
 command
 commodities
 commodity
@@ -88,6 +98,7 @@ cooling inefficiency
 core crystal
 corrosion damage
 cost
+count
 coward
 credits
 crew
@@ -105,7 +116,11 @@ death sentence
 debt
 decline
 default attitude
-defer
+delay
+delayed hull repair rate
+delayed shield energy
+delayed shield generation
+delayed shield heat
 depleted shield delay
 description
 despawn
@@ -124,6 +139,7 @@ disruption damage
 disruption protection
 distance
 drag
+drag reduction
 drop rate
 dropoff modifier
 duration
@@ -131,6 +147,7 @@ elapsed
 end
 energy capacity
 energy consumption
+energy damage
 energy generation
 energy protection
 enforces
@@ -142,19 +159,24 @@ environmental effect
 escort
 evade
 event
+exclusive: .*
 explode
-Factions
+facing
+fade out
 fighers
 fighters
 fill
 final explode
 fine
 fire effect
+firelight missile capacity
 firing energy
 firing force
 firing fuel
 firing heat
 firing hull
+firing ion
+firing shields
 flame
 flare sound
 flare sprite
@@ -177,11 +199,10 @@ frugal
 fuel
 fuel capacity
 fuel damage
+fuel generation
 galaxy
 gaslining
 gimbal
-give
-goto
 government
 gravitational
 green
@@ -192,9 +213,9 @@ habitable
 hardpoint offset
 hardpoint sprite
 harvests
-has
 hazard
 haze
+heat capacity
 heat damage
 heat dissipation
 heat generation
@@ -208,16 +229,20 @@ homing
 hostile disabled hail
 hostile hail
 hover
-hull
 hull damage
 hull energy
+hull energy multiplier
 hull heat
 hull protection
 hull repair
+hull repair energy
+hull repair multiplier
 hull repair rate
+hull
 hunting
 hyperdrive
 icon
+id
 idle
 if
 illegal
@@ -226,6 +251,7 @@ image
 inaccuracy
 inactive
 index
+inertia reduction
 infiltrating
 infrared tracking
 inject
@@ -240,16 +266,19 @@ ion resistance
 job
 jump
 jump drive
+jump effect
 jump fuel
+jump range
 jump speed
 ka'sei
 key
 kill
-label
 landing
 landscape
 language
 launch
+launch effect
+launching
 leading
 leak
 left
@@ -263,7 +292,9 @@ live effect
 load
 location
 log
+magnetic nozzle
 map
+mappable
 mark
 mass
 max
@@ -272,13 +303,17 @@ message
 middle
 min
 minable
+minable damage
 minables
+minelayer capacity
 mining
 minor
-Minor People
 missile strength
+mission
 month
 mortgage
+multimodal armor
+multiplier
 music
 mute
 name
@@ -288,19 +323,19 @@ navigate
 near
 neighbor
 nemesis
-never
 never disabled
 next
 no repeat
 non-blocking
 none
-not
 noun
 npc
 object
 offer
 offset
+operating costs
 opportunistic
+optical jamming
 optical tracking
 outfit
 outfit scan efficiency
@@ -323,12 +358,14 @@ payload
 payment
 peaceful
 penalty for
-People
+penetration count
 period
 personality
 phasing
 phrase
+piercer capacity
 piercing
+piercing protection
 pilot
 planet
 planet bribe acceptance hail
@@ -345,6 +382,7 @@ positions
 power
 principal
 priority
+prospecting
 provoke
 provoked on scan
 purchases
@@ -367,16 +405,20 @@ range override
 reactor upgrades
 recharges
 red
+relative firing shields
 relative hull damage
+relative shield damage
 relay upgrades
 reload
 remnant node
 remove
+repair delay
 repeat
 replace
 reputation
 reputation with
 require
+require outfits
 required crew
 required reputation
 restricted
@@ -403,18 +445,25 @@ score
 scram drive
 scramble protection
 scramble resistance
+scrambling damage
+scrambling resistance
 secretive
 security
+self destruct
 send untranslated hails
 sequence
 series
 services
-set
+shield connection point
 shield damage
+shield delay
 shield energy
+shield energy multiplier
+shield fuel
 shield generation
 shield generation multiplier
 shield heat
+shield protection
 shields
 ship
 ship bribe acceptance hail
@@ -434,8 +483,11 @@ sound category
 source
 spaceport
 spawn
+spike capacity
 spinal mount
+split range
 sprite
+star tail capacity
 start
 start frame
 status
@@ -444,6 +496,7 @@ stealth
 steering engine
 steering flare sound
 steering flare sprite
+stock
 stopover
 stream
 strength
@@ -461,13 +514,13 @@ tactical scan power
 target
 target effect
 term
-test-data
 text
 threshold
 threshold percentage
 throttle control
 thrust
 thrusting energy
+thrusting fuel
 thrusting heat
 thumbnail
 timer
@@ -475,8 +528,10 @@ timid
 toughness
 tracker capacity
 tracking
+tractor beam
 trade
 travel
+travel destination
 travel restrictions
 tribute
 trigger radius
@@ -495,6 +550,7 @@ unconstrained
 under
 uninterested
 unique
+universal
 unlink
 unmark
 unplunderable
@@ -503,6 +559,7 @@ uuid
 value
 variant
 velocity
+velocity override
 velocity scale
 vindictive
 visible
@@ -511,11 +568,14 @@ visited
 visited planet
 waiting
 watchdog
+waterlining
 waypoint
 weapon
 weapon capacity
 width
 wind
+with outfits
 word
 year
 zoom
+zooms

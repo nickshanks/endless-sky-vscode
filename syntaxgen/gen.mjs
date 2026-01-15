@@ -29,8 +29,8 @@ const repositoryItem = (filename, type, prefix = "", postfix = "") => {
 
 const language = () => {
   const files = [
-    ["events.txt", "support.function.event-handler", "(?<=\\\\t|  )"],
-    ["indentedKeys.txt", "meta.object-literal.key", `(?<=\\\\t|  )`],
+    ["events.txt", "support.function.event-handler", "(?<=\\\\t| )"], // events, triggers, & penalties (words following "on")
+    ["indentedKeys.txt", "meta.object-literal.key", `(?<=\\\\t| )`, "( |$)"],
     ["topLevelKeys.txt", "meta.object-literal.key", `^`],
   ];
   const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -55,3 +55,12 @@ const language = () => {
 };
 
 process.stdout.write(language());
+
+/*
+BUGS:
+  * The language parser does not correctly parse '<' or '>' outside of strings.
+	* Strings in value positions that match keywords are highlighted as keywords:
+      leak "leak" 60 60
+	    leak "flame" 60 60
+  * hull & test are not recognised if the sort order is alphabetical, they need to come last.
+*/

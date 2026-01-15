@@ -3,11 +3,8 @@
 	"name": "Endless Sky data",
 	"patterns": [
 		{
-			"name": "comment.line.number-sign",
+			"name": "comment.line.number-sign.endlesssky",
 			"match": "#.*"
-		},
-		{
-			"include": "#topLevelKeys"
 		},
 		{
 			"include": "#requireEvent"
@@ -16,18 +13,31 @@
 			"include": "#requireLabel"
 		},
 		{
+			"include": "#requireKeyValue"
+		},
+		{
 			"include": "#requireKey"
 		},
 		{
-			"name": "keyword.control.endlesssky",
-			"match": "(?<=\t)(and|choice|or)$"
+			"include": "#requireValue"
 		},
 		{
-			"name": "keyword.control.endlesssky",
+			"name": "keyword.operator.word.endlesssky",
+			"match": "(?<=\t)(and|or)$"
+		},
+		{
+			"name": "keyword.control.flow.endlesssky",
+			"match": "(?<=\t)(choice)$"
+		},
+		{
+			"name": "keyword.endlesssky",
 			"match": "\\b(random)\\b"
 		},
 		{
 			"include": "#events"
+		},
+		{
+			"include": "#topLevelKeys"
 		},
 		{
 			"include": "#indentedKeys"
@@ -37,28 +47,8 @@
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
-				{
-					"name": "constant.character.escape.endlesssky",
-					"match": "(<)(.*?)(>)",
-					"captures": {
-						"0": {
-							"name": "meta.bold.endlesssky"
-						},
-						"1": {
-							"name": "punctuation.definition.bold.endlesssky"
-						},
-						"2": {
-							"name": "markup.bold.endlesssky"
-						},
-						"3": {
-							"name": "punctuation.definition.bold.endlesssky"
-						}
-					}
-				},
-				{
-					"name": "constant.character.escape.endlesssky",
-					"match": "\\\\."
-				}
+				{ "include": "#substitution" },
+				{ "include": "#escape" }
 			]
 		},
 		{
@@ -66,28 +56,8 @@
 			"begin": "`",
 			"end": "`",
 			"patterns": [
-				{
-					"name": "constant.character.escape.endlesssky",
-					"match": "(<)(.*?)(>)",
-					"captures": {
-						"0": {
-							"name": "meta.bold.endlesssky"
-						},
-						"1": {
-							"name": "punctuation.definition.bold.endlesssky"
-						},
-						"2": {
-							"name": "markup.bold.endlesssky"
-						},
-						"3": {
-							"name": "punctuation.definition.bold.endlesssky"
-						}
-					}
-				},
-				{
-					"name": "constant.character.escape.endlesssky",
-					"match": "\\\\."
-				}
+				{ "include": "#substitution" },
+				{ "include": "#escape" }
 			]
 		},
 		{
@@ -96,15 +66,23 @@
 		},
 		{
 			"name": "constant.numeric.decimal.endlesssky",
-			"match": "(?<=[^a-zA-Z])[-]?(([0-9]*[.][0-9]+)|([0-9]+))"
+			"match": "(?<=[^a-zA-Z])-?(([0-9]*[.][0-9]+)|([0-9]+))"
 		},
 		{
-			"name": "keyword.operator.logical.endlesssky",
-			"match": "<=?|>=?"
+			"name": "punctuation.section.parens.begin.bracket.round.endlesssky",
+			"match": "[)]"
+		},
+		{
+			"name": "punctuation.section.parens.end.bracket.round.endlesssky",
+			"match": "[(]"
+		},
+		{
+			"name": "keyword.operator.comparison.endlesssky",
+			"match": "[<>]\\??=?"
 		},
 		{
 			"name": "keyword.operator.assignment.compound.endlesssky",
-			"match": "\\+=|-="
+			"match": "[+-]="
 		},
 		{
 			"name": "keyword.operator.assignment.endlesssky",
@@ -116,45 +94,61 @@
 		},
 		{
 			"name": "keyword.operator.increment.endlesssky",
-			"match": "\\+\\+"
+			"match": "[+][+]"
 		},
 		{
-			"name": "keyword.operator.increment.endlesssky",
-			"match": "[\\*/\\+-]"
+			"name": "keyword.operator.arithmetic.endlesssky",
+			"match": "[*/+-]"
 		}
 	],
 	"repository": {
+		"escape": {
+			"name": "constant.character.escape.endlesssky",
+			"match": "\\\\."
+		},
 		"requireEvent": {
 			"match": "(?<=\t)(on|to) (\".+?\"|\\S+)",
 			"captures": {
-				"1": {
-					"name": "keyword.control.endlesssky"
-				},
-				"2": {
-					"name": "support.function.event-handler.endlesssky"
-				}
+				"1": { "name": "keyword.control.endlesssky" },
+				"2": { "name": "support.function.event-handler.endlesssky" }
 			}
 		},
 		"requireKey": {
 			"match": "(?<=\t)(add|remove) (\".+?\"|\\S+)",
 			"captures": {
-				"1": {
-					"name": "keyword.control.endlesssky"
-				},
-				"2": {
-					"name": "meta.object-literal.key.endlesssky"
-				}
+				"1": { "name": "keyword.control.endlesssky" },
+				"2": { "name": "meta.object-literal.key.endlesssky" }
+			}
+		},
+		"requireKeyValue": {
+			"match": "(?<=\t)(give|take) (\".+?\"|\\S+) (?=[\"`a-zA-Z])",
+			"captures": {
+				"1": { "name": "keyword.control.endlesssky" },
+				"2": { "name": "meta.object-literal.key.endlesssky" }
 			}
 		},
 		"requireLabel": {
 			"match": "(?<=\t)(goto|label|branch) (\".+?\"|\\S+)",
 			"captures": {
-				"1": {
-					"name": "keyword.control.endlesssky"
-				},
-				"2": {
-					"name": "entity.name.label.endlesssky"
-				}
+				"1": { "name": "keyword.control.flow.endlesssky" },
+				"2": { "name": "entity.name.label.endlesssky" }
+			}
+		},
+		"requireValue": {
+			"match": "(?<=\t)(clear|has|not|set) ([a-z-]+ )?(?=[\"`a-zA-Z])",
+			"captures": {
+				"1": { "name": "keyword.control.endlesssky" },
+				"2": { "name": "meta.object-literal.key.endlesssky" }
+			}
+		},
+		"substitution": {
+			"name": "meta.generic.endlesssky",
+			"match": "(<)([a-zA-Z0-9 -]*?)(>)",
+			"captures": {
+				"0": { "name": "meta.bold.endlesssky" },
+				"1": { "name": "punctuation.definition.bold.endlesssky" },
+				"2": { "name": "markup.bold.endlesssky" },
+				"3": { "name": "punctuation.definition.bold.endlesssky" }
 			}
 		}
 	},
