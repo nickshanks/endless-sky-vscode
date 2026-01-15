@@ -1,0 +1,14 @@
+abort
+accept
+complete
+deactivation
+decline
+despawn
+die
+enter
+fail
+kill
+launch
+offer
+timeup
+visit

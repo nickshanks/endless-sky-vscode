@@ -1,25 +1,33 @@
 account
+available job
 category
+changes
 clearance
 collapsed
 color
+conditions
 conversation
 date
+economy
 effect
 event
 flagship index
 fleet
+fleet depreciation
 galaxy
 government
+groups
 harvested
 hazard
 help
 history
 interface
 landing message
+licenses
 logbook
 map coloring
 map zoom
+marked event changes today
 minable
 mission
 news
@@ -34,10 +42,15 @@ plugins
 previous system
 rating
 reputation with
+separate possible
 ship
 shipyard
+sort ascending 
+sort descending
+sort type
 star
 start
+stock depreciation
 storage
 swizzle
 system
@@ -47,6 +60,7 @@ test-data
 tip
 trade
 travel
+travel destination
 tribute received
 visited
 visited planet

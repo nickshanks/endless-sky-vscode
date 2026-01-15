@@ -3,47 +3,36 @@
 	"name": "Endless Sky data",
 	"patterns": [
 		{
-			"include": "#comments"
+			"name": "comment.line.number-sign",
+			"match": "#.*"
 		},
 		{
-			"include": "#topLevelKeywords"
+			"include": "#topLevelKeys"
+		},
+		{
+			"include": "#requireEvent"
 		},
 		{
 			"include": "#requireLabel"
 		},
 		{
-			"include": "#indentedKeywords"
+			"include": "#requireKey"
 		},
 		{
-			"include": "#doubleQuoteStrings"
+			"name": "keyword.control.endlesssky",
+			"match": "(?<=\t)(and|choice|or)$"
 		},
 		{
-			"include": "#backtickStrings"
+			"name": "keyword.control.endlesssky",
+			"match": "\\b(random)\\b"
 		},
 		{
-			"include": "#numbers"
+			"include": "#events"
 		},
 		{
-			"include": "#operators"
-		}
-	],
-	"repository": {
-		"comments": {
-			"name": "comment.line.number-sign",
-			"match": "#.*"
+			"include": "#indentedKeys"
 		},
-		"requireLabel": {
-			"match": "(?<=\t)(goto|label|branch) (\".+?\"|\\S+)",
-			"captures": {
-				"1": {
-					"name": "keyword.control.endlesssky"
-				},
-				"2": {
-					"name": "variable"
-				}
-			}
-		},
-		"doubleQuoteStrings": {
+		{
 			"name": "string.quoted.double.endlesssky",
 			"begin": "\"",
 			"end": "\"",
@@ -53,16 +42,16 @@
 					"match": "(<)(.*?)(>)",
 					"captures": {
 						"0": {
-							"name": "meta.bold.example"
+							"name": "meta.bold.endlesssky"
 						},
 						"1": {
-							"name": "punctuation.definition.bold.example"
+							"name": "punctuation.definition.bold.endlesssky"
 						},
 						"2": {
-							"name": "markup.bold.example"
+							"name": "markup.bold.endlesssky"
 						},
 						"3": {
-							"name": "punctuation.definition.bold.example"
+							"name": "punctuation.definition.bold.endlesssky"
 						}
 					}
 				},
@@ -72,8 +61,8 @@
 				}
 			]
 		},
-		"backtickStrings": {
-			"name": "string.quoted.double.endlesssky",
+		{
+			"name": "string.quoted.backtick.endlesssky",
 			"begin": "`",
 			"end": "`",
 			"patterns": [
@@ -82,16 +71,16 @@
 					"match": "(<)(.*?)(>)",
 					"captures": {
 						"0": {
-							"name": "meta.bold.example"
+							"name": "meta.bold.endlesssky"
 						},
 						"1": {
-							"name": "punctuation.definition.bold.example"
+							"name": "punctuation.definition.bold.endlesssky"
 						},
 						"2": {
-							"name": "markup.bold.example"
+							"name": "markup.bold.endlesssky"
 						},
 						"3": {
-							"name": "punctuation.definition.bold.example"
+							"name": "punctuation.definition.bold.endlesssky"
 						}
 					}
 				},
@@ -101,13 +90,72 @@
 				}
 			]
 		},
-		"numbers": {
-			"name": "constant.numeric",
-			"match": "[-]?(([0-9]*[.][0-9]+)|([0-9]+))"
+		{
+			"name": "constant.numeric.hex.endlesssky",
+			"match": "\\b[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\\b"
 		},
-		"operators": {
-			"name": "keyword.operator",
-			"match": "([=]|[+][=+]|[-][=-]|[<][=]?|[>][=]?)"
+		{
+			"name": "constant.numeric.decimal.endlesssky",
+			"match": "(?<=[^a-zA-Z])[-]?(([0-9]*[.][0-9]+)|([0-9]+))"
+		},
+		{
+			"name": "keyword.operator.logical.endlesssky",
+			"match": "<=?|>=?"
+		},
+		{
+			"name": "keyword.operator.assignment.compound.endlesssky",
+			"match": "\\+=|-="
+		},
+		{
+			"name": "keyword.operator.assignment.endlesssky",
+			"match": "="
+		},
+		{
+			"name": "keyword.operator.decrement.endlesssky",
+			"match": "--"
+		},
+		{
+			"name": "keyword.operator.increment.endlesssky",
+			"match": "\\+\\+"
+		},
+		{
+			"name": "keyword.operator.increment.endlesssky",
+			"match": "[\\*/\\+-]"
+		}
+	],
+	"repository": {
+		"requireEvent": {
+			"match": "(?<=\t)(on|to) (\".+?\"|\\S+)",
+			"captures": {
+				"1": {
+					"name": "keyword.control.endlesssky"
+				},
+				"2": {
+					"name": "support.function.event-handler.endlesssky"
+				}
+			}
+		},
+		"requireKey": {
+			"match": "(?<=\t)(add|remove) (\".+?\"|\\S+)",
+			"captures": {
+				"1": {
+					"name": "keyword.control.endlesssky"
+				},
+				"2": {
+					"name": "meta.object-literal.key.endlesssky"
+				}
+			}
+		},
+		"requireLabel": {
+			"match": "(?<=\t)(goto|label|branch) (\".+?\"|\\S+)",
+			"captures": {
+				"1": {
+					"name": "keyword.control.endlesssky"
+				},
+				"2": {
+					"name": "entity.name.label.endlesssky"
+				}
+			}
 		}
 	},
 	"scopeName": "source.endlesssky"

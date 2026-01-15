@@ -3,63 +3,36 @@
 	"name": "Endless Sky data",
 	"patterns": [
 		{
-			"include": "#comments"
+			"name": "comment.line.number-sign",
+			"match": "#.*"
 		},
 		{
-			"include": "#topLevelKeywords"
+			"include": "#topLevelKeys"
+		},
+		{
+			"include": "#requireEvent"
 		},
 		{
 			"include": "#requireLabel"
 		},
 		{
-			"include": "#indentedKeywords"
+			"include": "#requireKey"
 		},
 		{
-			"include": "#doubleQuoteStrings"
+			"name": "keyword.control.endlesssky",
+			"match": "(?<=\t)(and|choice|or)$"
 		},
 		{
-			"include": "#backtickStrings"
+			"name": "keyword.control.endlesssky",
+			"match": "\\b(random)\\b"
 		},
 		{
-			"include": "#numbers"
+			"include": "#events"
 		},
 		{
-			"include": "#operators"
-		}
-	],
-	"repository": {
-		"indentedKeywords": {
-			"patterns": [
-				{
-					"name": "keyword.control.endlesssky",
-					"match": "(?<=\\t|  )((\"(active cooling|afterburner effect|afterburner energy|afterburner fuel|afterburner heat|afterburner thrust|asteroid scan efficiency|asteroid scan power|atmosphere scan|attitude toward|blast radius|burst count|burst reload|capture attack|capture defense|cargo scan efficiency|cargo scan power|cargo scan speed|cargo space|cloaking energy|cloaking fuel|constant strength|cooling energy|cooling inefficiency|core crystal|corrosion damage|crew attack|crew defense|crew equivalent|crystal projector|damage dropoff|depleted shield delay|die effect|disabled recovery time|discharge damage|display name|disruption damage|drop rate|dropoff modifier|energy capacity|energy consumption|energy generation|engine capacity|environmental effect|final explode|fire effect|firing energy|firing force|firing fuel|firing heat|firing hull|flare sound|flare sprite|flotsam chance|flotsam sprite|force protection|frame rate|friendly disabled hail|friendly hail|fuel capacity|fuel damage|gun ports|hardpoint offset|hardpoint sprite|heat damage|heat dissipation|heat generation|heat protection|hit effect|hit force|hostile disabled hail|hostile hail|hull damage|hull energy|hull heat|hull repair|hull repair rate|infrared tracking|ion damage|ion resistance|jump drive|jump fuel|jump speed|live effect|Minor People|missile strength|nanite upgrades|never disabled|no repeat|optical tracking|outfit scan efficiency|outfit scan power|outfit scan speed|outfit space|overheat damage rate|overheat damage threshold|penalty for|player reputation|quantum keystone|radar jamming|radar tracking|random angle|random frame rate|random hull|random lifetime|random spin|random start frame|random velocity|range override|reactor upgrades|relative hull damage|relay upgrades|remnant node|default attitude|custom penalties for|travel restrictions|frame time|foreign penalties for|send untranslated hails|reputation with|required crew|required reputation|reverse engine|reverse flare sound|reverse flare sprite|reverse thrust|reverse thrusting energy|reverse thrusting heat|scan cargo|scan interference|scan outfits|scram drive|shield damage|shield energy|shield generation|shield generation multiplier|shield heat|shooting star|slowing damage|slowing resistance|solar cell|solar collection|solar heat|sound category|spinal mount|start frame|steering engine|steering flare sound|steering flare sprite|tactical scan efficiency|tactical scan power|target effect|threshold percentage|throttle control|thrusting energy|thrusting heat|tracker capacity|trigger radius|turning energy|turning heat|turret mounts|turret turn|velocity scale|visited planet|weapon capacity)\")|((?<optionalquote>\"?)(abort|acceleration|accept|accompany|account|action|actions|active|add|align|alignment|alpha|ammo|anchor|and|angle|anti-missile|appeasing|apply|arc|arrival|assert|assist|assisting|asteroids|atrocity|attributes|automaton|autosave|back|bar|bay|belt|blocked|blue|board|boarding|box|branch|bribe|bunks|button|call|capture|cargo|category|center|choice|clear|clearance|cloak|color|colored|command|commodities|commodity|complete|confusion|contents|conversation|cooling|cost|coward|credits|crew|daring|date|day|deadline|debt|decline|defer|description|despawn|destination|destroy|dialog|die|dimensions|disable|disables|distance|drag|duration|end|engine|enter|entering|escort|evade|event|explode|Factions|fail|fighers|fighters|fill|fine|flame|fleeing|fleet|flippable|forbearing|formation|frequency|from|fuel|galaxy|gaslining|gimbal|give|goto|government|gravitational|green|groups|gun|habitable|harvests|has|hazard|haze|help|heroic|history|homing|hover|hull|hunting|hyperdrive|icon|if|illegal|image|inaccuracy|inactive|index|infiltrating|inject|input|inscrutable|installable|interest|invisible|job|jump|ka'sei|key|kill|label|landing|landscape|language|launch|leading|leak|left|licenses|lifetime|line|lingering|link|list|load|location|log|map|mark|mass|merciful|message|middle|minable|minables|mining|minor|month|mortgage|music|mute|name|names|navigate|near|neighbor|nemesis|never|next|non-blocking|not|noun|npc|object|offer|offset|on|opportunistic|or|outfit|outfits|outfitter|outfitters|outline|over|pad|parallel|parked|partial|passengers|payload|payment|People|period|personality|phasing|phrase|piercing|pilot|planet|plunders|plural|point|pointer|pos|position|positions|power|principal|priority|provoke|quiet|raid|ramscoop|random|range|red|frugal|reload|remove|repeat|scan|atrocities|substitutions|replace|require|restricted|reversed|rewind|right|ring|rotatable|rotatable|safe|save|scale|scene|score|secretive|security|sequence|series|set|shields|ship|shipyard|show|size|sound|source|spaceport|spawn|sprite|start|status|staying|stealth|stopover|stream|strength|string|submunition|succeed|surveillance|swarming|swizzle|system|system-wide|target|term|test-data|text|threshold|thrust|thumbnail|timid|to|toughness|tracking|trade|travel|tribute|truncate|turn|turret|uncapturable|unconstrained|under|uninterested|unique|unlink|unmark|unplunderable|unvisit|uuid|value|variant|velocity|vindictive|visible|visit|visited|waiting|watchdog|waypoint|weapon|width|wind|word|year|zoom)\\b\\k<optionalquote>))"
-				}
-			]
+			"include": "#indentedKeys"
 		},
-		"topLevelKeywords": {
-			"patterns": [
-				{
-					"name": "keyword.control.endlesssky",
-					"match": "^((\"(flagship index|landing message|map coloring|map zoom|previous system|reputation with|system entry method|tribute received|visited planet)\")|((?<optionalquote>\"?)(account|category|clearance|collapsed|color|conversation|date|effect|event|fleet|galaxy|government|harvested|hazard|help|history|interface|logbook|minable|mission|news|outfit|outfitter|person|phrase|pilot|planet|playtime|plugins|rating|ship|shipyard|star|start|storage|swizzle|system|test|test-data|tip|trade|travel|visited)\\b\\k<optionalquote>))"
-				}
-			]
-		},
-		"comments": {
-			"name": "comment.line.number-sign",
-			"match": "#.*"
-		},
-		"requireLabel": {
-			"match": "(?<=\t)(goto|label|branch) (\".+?\"|\\S+)",
-			"captures": {
-				"1": {
-					"name": "keyword.control.endlesssky"
-				},
-				"2": {
-					"name": "variable"
-				}
-			}
-		},
-		"doubleQuoteStrings": {
+		{
 			"name": "string.quoted.double.endlesssky",
 			"begin": "\"",
 			"end": "\"",
@@ -69,16 +42,16 @@
 					"match": "(<)(.*?)(>)",
 					"captures": {
 						"0": {
-							"name": "meta.bold.example"
+							"name": "meta.bold.endlesssky"
 						},
 						"1": {
-							"name": "punctuation.definition.bold.example"
+							"name": "punctuation.definition.bold.endlesssky"
 						},
 						"2": {
-							"name": "markup.bold.example"
+							"name": "markup.bold.endlesssky"
 						},
 						"3": {
-							"name": "punctuation.definition.bold.example"
+							"name": "punctuation.definition.bold.endlesssky"
 						}
 					}
 				},
@@ -88,8 +61,8 @@
 				}
 			]
 		},
-		"backtickStrings": {
-			"name": "string.quoted.double.endlesssky",
+		{
+			"name": "string.quoted.backtick.endlesssky",
 			"begin": "`",
 			"end": "`",
 			"patterns": [
@@ -98,16 +71,16 @@
 					"match": "(<)(.*?)(>)",
 					"captures": {
 						"0": {
-							"name": "meta.bold.example"
+							"name": "meta.bold.endlesssky"
 						},
 						"1": {
-							"name": "punctuation.definition.bold.example"
+							"name": "punctuation.definition.bold.endlesssky"
 						},
 						"2": {
-							"name": "markup.bold.example"
+							"name": "markup.bold.endlesssky"
 						},
 						"3": {
-							"name": "punctuation.definition.bold.example"
+							"name": "punctuation.definition.bold.endlesssky"
 						}
 					}
 				},
@@ -117,13 +90,96 @@
 				}
 			]
 		},
-		"numbers": {
-			"name": "constant.numeric",
-			"match": "[-]?(([0-9]*[.][0-9]+)|([0-9]+))"
+		{
+			"name": "constant.numeric.hex.endlesssky",
+			"match": "\\b[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\\b"
 		},
-		"operators": {
-			"name": "keyword.operator",
-			"match": "([=]|[+][=+]|[-][=-]|[<][=]?|[>][=]?)"
+		{
+			"name": "constant.numeric.decimal.endlesssky",
+			"match": "(?<=[^a-zA-Z])[-]?(([0-9]*[.][0-9]+)|([0-9]+))"
+		},
+		{
+			"name": "keyword.operator.logical.endlesssky",
+			"match": "<=?|>=?"
+		},
+		{
+			"name": "keyword.operator.assignment.compound.endlesssky",
+			"match": "\\+=|-="
+		},
+		{
+			"name": "keyword.operator.assignment.endlesssky",
+			"match": "="
+		},
+		{
+			"name": "keyword.operator.decrement.endlesssky",
+			"match": "--"
+		},
+		{
+			"name": "keyword.operator.increment.endlesssky",
+			"match": "\\+\\+"
+		},
+		{
+			"name": "keyword.operator.increment.endlesssky",
+			"match": "[\\*/\\+-]"
+		}
+	],
+	"repository": {
+		"events": {
+			"patterns": [
+				{
+					"name": "support.function.event-handler.endlesssky",
+					"match": "(?<=\\t|  )((\"()\")|((?<optionalquote>\"?)(abort|accept|complete|deactivation|decline|despawn|die|enter|fail|kill|launch|offer|timeup|visit)\\b\\k<optionalquote>))"
+				}
+			]
+		},
+		"indentedKeys": {
+			"patterns": [
+				{
+					"name": "meta.object-literal.key.endlesssky",
+					"match": "(?<=\\t|  )((\"(activation requirements|active cooling|afterburner effect|afterburner energy|afterburner fuel|afterburner heat|afterburner thrust|asteroid scan efficiency|asteroid scan power|atmosphere scan|attitude toward|blast radius|bribe threshold|burn protection|burst count|burst reload|capture attack|capture defense|cargo scan efficiency|cargo scan power|cargo scan speed|cargo space|cloaking energy|cloaking fuel|constant strength|cooling energy|cooling inefficiency|core crystal|corrosion damage|crew attack|crew defense|crew equivalent|crystal projector|custom penalties for|damage dropoff|death sentence|default attitude|depleted shield delay|die effect|disabled recovery time|discharge damage|discharge protection|display name|disruption damage|disruption protection|drop rate|dropoff modifier|energy capacity|energy consumption|energy generation|energy protection|engine capacity|environmental effect|final explode|fire effect|firing energy|firing force|firing fuel|firing heat|firing hull|flare sound|flare sprite|flotsam chance|flotsam sprite|force protection|foreign penalties for|frame rate|frame time|friendly disabled hail|friendly hail|fuel capacity|fuel damage|gun ports|hardpoint offset|hardpoint sprite|heat damage|heat dissipation|heat generation|heat protection|hit effect|hit force|hostile disabled hail|hostile hail|hull damage|hull energy|hull heat|hull protection|hull repair|hull repair rate|infrared tracking|ion damage|ion protection|ion resistance|jump drive|jump fuel|jump speed|live effect|Minor People|missile strength|nanite upgrades|never disabled|no repeat|optical tracking|outfit scan efficiency|outfit scan power|outfit scan speed|outfit space|overheat damage rate|overheat damage threshold|penalty for|planet bribe acceptance hail|planet bribe rejection hail|player reputation|provoked on scan|quantum keystone|radar jamming|radar tracking|random angle|random frame rate|random hull|random lifetime|random spin|random start frame|random velocity|range override|reactor upgrades|relative hull damage|relay upgrades|remnant node|reputation with|required crew|required reputation|reverse engine|reverse flare sound|reverse flare sprite|reverse thrust|reverse thrusting energy|reverse thrusting heat|scan cargo|scan interference|scan outfits|scram drive|scramble protection|scramble resistance|send untranslated hails|shield damage|shield energy|shield generation|shield generation multiplier|shield heat|ship bribe acceptance hail|ship bribe rejection hail|shooting star|slowing damage|slowing protection|slowing resistance|solar cell|solar collection|solar heat|sound category|spinal mount|start frame|steering engine|steering flare sound|steering flare sprite|tactical scan efficiency|tactical scan power|target effect|threshold percentage|throttle control|thrusting energy|thrusting heat|tracker capacity|travel restrictions|trigger radius|triggered actions|turning energy|turning heat|turret mounts|turret turn|velocity scale|visited planet|weapon capacity)\")|((?<optionalquote>\"?)(acceleration|accept|accompany|account|action|actions|active|add|align|alignment|alpha|ammo|anchor|angle|anti-missile|appeasing|apply|arc|arrival|assert|assist|assisting|asteroids|atrocities|atrocity|attributes|automaton|autosave|back|bar|bay|belt|blocked|blue|board|boarding|box|branch|bribe|bunks|button|call|capture|cargo|category|center|choice|clear|clearance|cloak|color|colored|command|commodities|commodity|complete|confusion|contents|conversation|cooling|cost|coward|credits|crew|daring|date|day|deadline|debt|decline|defer|description|despawn|destination|destroy|dialog|dimensions|disable|disables|distance|drag|duration|elapsed|end|enforces|engine|enter|entering|escort|evade|event|explode|Factions|fighers|fighters|fill|fine|flame|fleeing|fleet|flippable|forbearing|formation|frequency|from|frugal|fuel|galaxy|gaslining|gimbal|give|goto|government|gravitational|green|groups|gun|habitable|harvests|has|hazard|haze|help|heroic|history|homing|hover|hull|hunting|hyperdrive|icon|idle|if|illegal|illegals|image|inaccuracy|inactive|index|infiltrating|inject|input|inscrutable|installable|interest|invisible|job|jump|ka'sei|key|kill|label|landing|landscape|language|launch|leading|leak|left|licenses|lifetime|line|lingering|link|list|load|location|log|map|mark|mass|max|merciful|message|middle|min|minable|minables|mining|minor|month|mortgage|music|mute|name|names|navigate|near|neighbor|nemesis|never|next|non-blocking|none|not|noun|npc|object|offer|offset|opportunistic|outfit|outfits|outfitter|outfitters|outline|over|pad|parallel|parked|partial|passengers|payload|payment|peaceful|People|period|personality|phasing|phrase|piercing|pilot|planet|plunders|plural|point|pointer|port|pos|position|positions|power|principal|priority|provoke|purchases|quiet|raid|ramscoop|random|range|recharges|red|reload|remove|repeat|replace|reputation|require|restricted|reversed|rewind|right|ring|rotatable|safe|save|scale|scan|scene|score|secretive|security|sequence|series|services|set|shields|ship|shipyard|show|size|sound|source|spaceport|spawn|sprite|start|status|staying|stealth|stopover|stream|strength|string|submunition|substitutions|succeed|surveillance|swarming|swizzle|system|system-wide|target|term|test-data|text|threshold|thrust|thumbnail|timer|timid|toughness|tracking|trade|travel|tribute|truncate|trusted|turn|turret|uncapturable|uncloaked|unconstrained|under|uninterested|unique|unlink|unmark|unplunderable|unvisit|uuid|value|variant|velocity|vindictive|visible|visit|visited|waiting|watchdog|waypoint|weapon|width|wind|word|year|zoom)\\b\\k<optionalquote>))"
+				}
+			]
+		},
+		"topLevelKeys": {
+			"patterns": [
+				{
+					"name": "meta.object-literal.key.endlesssky",
+					"match": "^((\"(available job|flagship index|fleet depreciation|landing message|map coloring|map zoom|marked event changes today|previous system|reputation with|separate possible|sort ascending |sort descending|sort type|stock depreciation|system entry method|travel destination|tribute received|visited planet)\")|((?<optionalquote>\"?)(account|category|changes|clearance|collapsed|color|conditions|conversation|date|economy|effect|event|fleet|galaxy|government|groups|harvested|hazard|help|history|interface|licenses|logbook|minable|mission|news|outfit|outfitter|person|phrase|pilot|planet|playtime|plugins|rating|ship|shipyard|star|start|storage|swizzle|system|test|test-data|tip|trade|travel|visited)\\b\\k<optionalquote>))"
+				}
+			]
+		},
+		"requireEvent": {
+			"match": "(?<=\t)(on|to) (\".+?\"|\\S+)",
+			"captures": {
+				"1": {
+					"name": "keyword.control.endlesssky"
+				},
+				"2": {
+					"name": "support.function.event-handler.endlesssky"
+				}
+			}
+		},
+		"requireKey": {
+			"match": "(?<=\t)(add|remove) (\".+?\"|\\S+)",
+			"captures": {
+				"1": {
+					"name": "keyword.control.endlesssky"
+				},
+				"2": {
+					"name": "meta.object-literal.key.endlesssky"
+				}
+			}
+		},
+		"requireLabel": {
+			"match": "(?<=\t)(goto|label|branch) (\".+?\"|\\S+)",
+			"captures": {
+				"1": {
+					"name": "keyword.control.endlesssky"
+				},
+				"2": {
+					"name": "entity.name.label.endlesssky"
+				}
+			}
 		}
 	},
 	"scopeName": "source.endlesssky"

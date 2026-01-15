@@ -3,7 +3,7 @@ import path, { dirname } from "path";
 import process from "process";
 import { fileURLToPath } from "url";
 
-const repositoryItem = (filename, prefix) => {
+const repositoryItem = (filename, type, prefix = "", postfix = "") => {
   const keywords = fs
     .readFileSync(filename, "utf8")
     .split("\n")
@@ -14,13 +14,13 @@ const repositoryItem = (filename, prefix) => {
   const multiWord = keywords.filter((w) => w.includes(" ")).join("|");
   const singleWord = keywords.filter((w) => !w.includes(" ")).join("|");
 
-  const pat = `"${prefix}((\\"(${multiWord})\\")|((?<optionalquote>\\"?)(${singleWord})\\\\b\\\\k<optionalquote>))"`;
+  const pat = `"${prefix}((\\"(${multiWord})\\")|((?<optionalquote>\\"?)(${singleWord})\\\\b\\\\k<optionalquote>))${postfix}"`;
 
   return `
 		"${name}": {
 			"patterns": [
 				{
-					"name": "keyword.control.endlesssky",
+					"name": "${type}.endlesssky",
 					"match": ${pat}
 				}
 			]
@@ -29,8 +29,9 @@ const repositoryItem = (filename, prefix) => {
 
 const language = () => {
   const files = [
-    ["indentedKeywords.txt", `(?<=\\\\t|  )`],
-    ["topLevelKeywords.txt", `^`],
+    ["events.txt", "support.function.event-handler", "(?<=\\\\t|  )"],
+    ["indentedKeys.txt", "meta.object-literal.key", `(?<=\\\\t|  )`],
+    ["topLevelKeys.txt", "meta.object-literal.key", `^`],
   ];
   const __dirname = dirname(fileURLToPath(import.meta.url));
   const template = fs.readFileSync(
@@ -47,7 +48,7 @@ const language = () => {
   return (
     template.slice(0, insertionPoint) +
     files
-      .map(([f, prefix]) => repositoryItem(__dirname + "/" + f, prefix))
+      .map(([f, ...params]) => repositoryItem(__dirname + "/" + f, ...params))
       .join("") +
     template.slice(insertionPoint)
   );
