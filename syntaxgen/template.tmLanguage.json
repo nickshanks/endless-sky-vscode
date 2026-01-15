@@ -37,28 +37,19 @@
 			"include": "#events"
 		},
 		{
-			"include": "#topLevelKeys"
-		},
-		{
-			"include": "#indentedKeys"
+			"include": "#keywords"
 		},
 		{
 			"name": "string.quoted.double.endlesssky",
 			"begin": "\"",
 			"end": "\"",
-			"patterns": [
-				{ "include": "#substitution" },
-				{ "include": "#escape" }
-			]
+			"patterns": [{ "include": "#substitution" }, { "include": "#escape" }]
 		},
 		{
 			"name": "string.quoted.backtick.endlesssky",
 			"begin": "`",
 			"end": "`",
-			"patterns": [
-				{ "include": "#substitution" },
-				{ "include": "#escape" }
-			]
+			"patterns": [{ "include": "#substitution" }, { "include": "#escape" }]
 		},
 		{
 			"name": "constant.numeric.hex.endlesssky",

@@ -43,6 +43,7 @@ atrocity
 attitude toward
 attributes
 automaton
+available job
 back
 bar
 bay
@@ -73,6 +74,7 @@ cargo scan speed
 cargo space
 category
 center
+changes
 clearance
 cloak
 cloaked communication
@@ -81,6 +83,7 @@ cloaked shield permeability
 cloaking energy
 cloaking fuel
 cluster
+collapsed
 color
 colored
 combat rating
@@ -88,6 +91,7 @@ command
 commodities
 commodity
 complete
+conditions
 confusion
 constant strength
 contents
@@ -143,6 +147,8 @@ drag reduction
 drop rate
 dropoff modifier
 duration
+economy
+effect
 elapsed
 end
 energy capacity
@@ -159,7 +165,7 @@ environmental effect
 escort
 evade
 event
-exclusive: .*
+exclusive:
 explode
 facing
 fade out
@@ -177,11 +183,13 @@ firing heat
 firing hull
 firing ion
 firing shields
+flagship index
 flame
 flare sound
 flare sprite
 fleeing
 fleet
+fleet depreciation
 flippable
 flotsam chance
 flotsam sprite
@@ -196,10 +204,10 @@ friendly disabled hail
 friendly hail
 from
 frugal
-fuel
 fuel capacity
 fuel damage
 fuel generation
+fuel
 galaxy
 gaslining
 gimbal
@@ -207,11 +215,12 @@ government
 gravitational
 green
 groups
-gun
 gun ports
+gun
 habitable
 hardpoint offset
 hardpoint sprite
+harvested
 harvests
 hazard
 haze
@@ -259,6 +268,7 @@ input
 inscrutable
 installable
 interest
+interface
 invisible
 ion damage
 ion protection
@@ -274,6 +284,7 @@ ka'sei
 key
 kill
 landing
+landing message
 landscape
 language
 launch
@@ -292,10 +303,14 @@ live effect
 load
 location
 log
+logbook
 magnetic nozzle
 map
+map coloring
+map zoom
 mappable
 mark
+marked event changes today
 mass
 max
 merciful
@@ -324,6 +339,7 @@ near
 neighbor
 nemesis
 never disabled
+news
 next
 no repeat
 non-blocking
@@ -360,6 +376,7 @@ peaceful
 penalty for
 penetration count
 period
+person
 personality
 phasing
 phrase
@@ -371,6 +388,8 @@ planet
 planet bribe acceptance hail
 planet bribe rejection hail
 player reputation
+playtime
+plugins
 plunders
 plural
 point
@@ -380,6 +399,7 @@ pos
 position
 positions
 power
+previous system
 principal
 priority
 prospecting
@@ -402,6 +422,7 @@ random start frame
 random velocity
 range
 range override
+rating
 reactor upgrades
 recharges
 red
@@ -451,6 +472,7 @@ secretive
 security
 self destruct
 send untranslated hails
+separate possible
 sequence
 series
 services
@@ -478,6 +500,9 @@ slowing resistance
 solar cell
 solar collection
 solar heat
+sort ascending 
+sort descending
+sort type
 sound
 sound category
 source
@@ -487,6 +512,7 @@ spike capacity
 spinal mount
 split range
 sprite
+star
 star tail capacity
 start
 start frame
@@ -497,7 +523,9 @@ steering engine
 steering flare sound
 steering flare sprite
 stock
+stock depreciation
 stopover
+storage
 stream
 strength
 string
@@ -508,12 +536,15 @@ surveillance
 swarming
 swizzle
 system
+system entry method
 system-wide
 tactical scan efficiency
 tactical scan power
 target
 target effect
 term
+test-data
+test
 text
 threshold
 threshold percentage
@@ -525,6 +556,7 @@ thrusting heat
 thumbnail
 timer
 timid
+tip
 toughness
 tracker capacity
 tracking
@@ -534,6 +566,7 @@ travel
 travel destination
 travel restrictions
 tribute
+tribute received
 trigger radius
 triggered actions
 truncate
@@ -576,6 +609,7 @@ width
 wind
 with outfits
 word
+wormhole
 year
 zoom
 zooms

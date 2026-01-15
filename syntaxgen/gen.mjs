@@ -30,8 +30,7 @@ const repositoryItem = (filename, type, prefix = "", postfix = "") => {
 const language = () => {
   const files = [
     ["events.txt", "support.function.event-handler", "(?<=\\\\t| )"], // events, triggers, & penalties (words following "on")
-    ["indentedKeys.txt", "meta.object-literal.key", `(?<=\\\\t| )`, "( |$)"],
-    ["topLevelKeys.txt", "meta.object-literal.key", `^`],
+    ["keywords.txt", "meta.object-literal.key", "(?<=\\\\t| |^)", "( |$)"],
   ];
   const __dirname = dirname(fileURLToPath(import.meta.url));
   const template = fs.readFileSync(
