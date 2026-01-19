@@ -8,7 +8,7 @@ const repositoryItem = (
   type,
   lookbehind = "",
   lookahead = "",
-  multiwordPrefix = ""
+  multiwordPrefix = "",
 ) => {
   const keywords = fs
     .readFileSync(filename, "utf8")
@@ -42,13 +42,13 @@ const language = () => {
       "variable.other",
       "(?<=^| |\\\\t)",
       "(?=$| )",
-      "(?:requires )?", // this bit doesn't work
+      "(?:requires: )?", // this bit doesn't work
     ],
   ];
   const __dirname = dirname(fileURLToPath(import.meta.url));
   const template = fs.readFileSync(
     __dirname + "/template.tmLanguage.json",
-    "utf8"
+    "utf8",
   );
   const repositoryHeader = '\n\t"repository": {';
   const insertionPoint =
