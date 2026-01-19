@@ -33,6 +33,6 @@ Please open issues with bugs and ideas [here](https://github.com/thomasballinger
 
 If you want to improve anything, especially the snippets or syntax highlighting, make a pull request to [this repo](https://github.com/thomasballinger/endless-sky-vscode) or let [@ballingt](https://twitter.com/ballingt) know on Twitter or message @ballingt on the [Endless Sky Discord](https://discord.gg/ZeuASSx).
 
-Syntax highlighting of keys is based on the text files in the [syntaxgen](syntaxgen) folder. If a word isn't being highlighted, it should be added to [keys.txt](syntaxgen/keys.txt).
+Syntax highlighting of keys is based on the text files in the [syntaxgen](syntaxgen) folder. If a word isn't being highlighted, it should be added to [keywords.txt](syntaxgen/keywords.txt).
 
 Some features are provided by an [LSP](https://microsoft.github.io/language-server-protocol/) which will soon use the [JavaScript Endless Sky bindings](https://github.com/thomasballinger/endless-sky-bindings). Contributions to these bindings are helpful too.
