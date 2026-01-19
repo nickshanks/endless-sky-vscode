@@ -27,7 +27,6 @@ apply
 arc
 arrival
 assert
-assist
 assisting
 asteroid mount
 asteroid mount 4
@@ -39,7 +38,6 @@ asteroid scan power
 asteroids
 atmosphere scan
 atrocities
-atrocity
 attitude toward
 attributes
 automaton
@@ -51,7 +49,6 @@ belt
 blast radius
 blocked
 blue
-board
 boarding
 box
 branch
@@ -64,7 +61,6 @@ burst count
 burst reload
 button
 call
-capture
 capture attack
 capture defense
 cargo
@@ -77,11 +73,24 @@ center
 changes
 clearance
 cloak
+cloak by mass
+cloak hull protection
+cloak hull threshold
+cloak phasing
+cloak shield protection
 cloaked communication
+cloaked firing
+cloaked regen multiplier
+cloaked repair multiplier
 cloaked scanning
 cloaked shield permeability
 cloaking energy
 cloaking fuel
+cloaking heat
+cloaking hull
+cloaking repair delay
+cloaking shield delay
+cloaking shields
 cluster
 collapsed
 color
@@ -90,7 +99,6 @@ combat rating
 command
 commodities
 commodity
-complete
 conditions
 confusion
 constant strength
@@ -101,6 +109,7 @@ cooling energy
 cooling inefficiency
 core crystal
 corrosion damage
+corrosion resistance
 cost
 count
 coward
@@ -118,7 +127,6 @@ day
 deadline
 death sentence
 debt
-decline
 default attitude
 delay
 delayed hull repair rate
@@ -127,13 +135,10 @@ delayed shield generation
 delayed shield heat
 depleted shield delay
 description
-despawn
 destination
-destroy
 dialog
 die effect
 dimensions
-disable
 disabled recovery time
 disables
 discharge damage
@@ -159,7 +164,6 @@ energy protection
 enforces
 engine
 engine capacity
-enter
 entering
 environmental effect
 escort
@@ -209,7 +213,6 @@ fuel damage
 fuel generation
 fuel
 galaxy
-gaslining
 gimbal
 government
 gravitational
@@ -270,6 +273,7 @@ installable
 interest
 interface
 invisible
+invisible fence
 ion damage
 ion protection
 ion resistance
@@ -280,14 +284,11 @@ jump effect
 jump fuel
 jump range
 jump speed
-ka'sei
 key
-kill
 landing
 landing message
 landscape
 language
-launch
 launch effect
 launching
 leading
@@ -347,7 +348,6 @@ none
 noun
 npc
 object
-offer
 offset
 operating costs
 opportunistic
@@ -365,6 +365,7 @@ outline
 over
 overheat damage rate
 overheat damage threshold
+pacifist
 pad
 parallel
 parked
@@ -403,7 +404,6 @@ previous system
 principal
 priority
 prospecting
-provoke
 provoked on scan
 purchases
 quantum keystone
@@ -411,6 +411,7 @@ quiet
 radar jamming
 radar tracking
 raid
+ramming
 ramscoop
 random
 random angle
@@ -457,7 +458,6 @@ rotatable
 safe
 save
 scale
-scan
 scan cargo
 scan interference
 scan outfits
@@ -514,6 +514,7 @@ split range
 sprite
 star
 star tail capacity
+starfield density
 start
 start frame
 status
@@ -596,12 +597,10 @@ velocity override
 velocity scale
 vindictive
 visible
-visit
 visited
 visited planet
 waiting
 watchdog
-waterlining
 waypoint
 weapon
 weapon capacity

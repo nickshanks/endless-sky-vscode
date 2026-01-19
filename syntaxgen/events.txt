@@ -24,5 +24,10 @@ provoke
 scan
 scan cargo
 scan outfits
+spawn
 timeup
 visit
+access
+bribe
+recharge
+service

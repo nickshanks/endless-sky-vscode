@@ -3,7 +3,13 @@ import path, { dirname } from "path";
 import process from "process";
 import { fileURLToPath } from "url";
 
-const repositoryItem = (filename, type, prefix = "", postfix = "") => {
+const repositoryItem = (
+  filename,
+  type,
+  lookbehind = "",
+  lookahead = "",
+  multiwordPrefix = ""
+) => {
   const keywords = fs
     .readFileSync(filename, "utf8")
     .split("\n")
@@ -14,7 +20,7 @@ const repositoryItem = (filename, type, prefix = "", postfix = "") => {
   const multiWord = keywords.filter((w) => w.includes(" ")).join("|");
   const singleWord = keywords.filter((w) => !w.includes(" ")).join("|");
 
-  const pat = `"${prefix}((\\"(${multiWord})\\")|((?<optionalquote>\\"?)(${singleWord})\\\\b\\\\k<optionalquote>))${postfix}"`;
+  const pat = `"${lookbehind}((\\"${multiwordPrefix}(?:${multiWord})\\")|((?<optionalquote>\\"?)(?:${singleWord})\\\\b\\\\k<optionalquote>))${lookahead}"`;
 
   return `
 		"${name}": {
@@ -29,8 +35,15 @@ const repositoryItem = (filename, type, prefix = "", postfix = "") => {
 
 const language = () => {
   const files = [
-    ["events.txt", "support.function.event-handler", "(?<=\\\\t| )"], // events, triggers, & penalties (words following "on")
-    ["keywords.txt", "meta.object-literal.key", "(?<=\\\\t| |^)", "( |$)"],
+    ["events.txt", "support.function.event-handler", "(?<=\\\\t| )"], // events, triggers, & penalties (words following "on" or "to")
+    ["keywords.txt", "meta.object-literal.key", "(?<=\\\\t| |^)", "(?= |$)"],
+    [
+      "attributes.txt", // keywords only defined and consumed via data files, not code (i.e. scenario, not engine)
+      "variable.other",
+      "(?<=^| |\\\\t)",
+      "(?=$| )",
+      "(?:requires )?", // this bit doesn't work
+    ],
   ];
   const __dirname = dirname(fileURLToPath(import.meta.url));
   const template = fs.readFileSync(

@@ -37,6 +37,9 @@
 			"include": "#events"
 		},
 		{
+			"include": "#attributes"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
